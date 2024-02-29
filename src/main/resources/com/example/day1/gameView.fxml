@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: skyblue; -fx-border-width: 20; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.day1.gameController">
+   <children>
+      <Button fx:id="btn1" layoutX="252.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#clickme" style="-fx-background-radius: 15; -fx-border-color: blue; -fx-border-radius: 15;" text="Submit" textFill="#2b0991">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.19772969186306" green="0.030448343604803085" blue="0.7473683953285217" />
+               </color>
+            </DropShadow>
+         </effect></Button>
+      <Label layoutX="133.0" layoutY="26.0" text="GUESS THE NUMBER">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7599999904632568" green="0.015200000256299973" blue="0.057732995599508286" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.017894737422466278" green="0.035192981362342834" blue="0.5368421077728271" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <Glow level="0.39" />
+         </effect>
+      </Label>
+      <Label fx:id="label1" alignment="CENTER" layoutX="196.0" layoutY="318.0" text="You have 7 chances left!">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7599999904632568" green="0.09120000153779984" blue="0.16078612208366394" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5052631497383118" green="0.0187134500592947" blue="0.0187134500592947" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.172319695353508" green="0.18435996770858765" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <TextField fx:id="tbox" layoutX="207.0" layoutY="127.0" prefHeight="35.0" prefWidth="166.0" promptText="guess between 1-100" style="-fx-border-color: blue; -fx-border-width: 3; -fx-font-size: 14; -fx-font-family: Arial Black; -fx-background-radius: 15; -fx-border-radius: 15;">
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="1.7" specularExponent="37.01" surfaceScale="2.34">
+               <bumpInput>
+                  <Shadow>
+                     <color>
+                        <Color red="0.0608999989926815" green="0.09831503033638" blue="0.8700000047683716" />
+                     </color>
+                  </Shadow>
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.9082261323928833" green="0.9388551115989685" blue="0.9578947424888611" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect></TextField>
+      <Label layoutX="37.0" layoutY="91.0" style="-fx-background-color: skyblue;" text="Enter Your Guess :" textFill="#270885">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.74" topOpacity="0.23" />
+         </effect>
+      </Label>
+      <Button fx:id="btn2" disable="true" layoutX="236.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#startAgain" style="-fx-background-radius: 15; -fx-border-color: blue; -fx-border-radius: 15;" text="Start Again" textFill="#2b0991">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="label3" layoutX="354.0" layoutY="91.0" style="-fx-background-color: skyblue;" text="Your Score : 0" textFill="#270885">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.65" topOpacity="0.3" />
+         </effect>
+      </Label>
+      <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="392.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../back.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <Lighting diffuseConstant="1.5" specularConstant="1.61" specularExponent="32.15" surfaceScale="7.29">
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>
